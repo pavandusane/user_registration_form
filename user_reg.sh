@@ -11,3 +11,13 @@ then
 else
   echo "Name should be begin with alphabets or having minimum length is 3"
 fi
+
+echo "Enter your last name : "
+read lname
+pat="^[a-zA-Z*]{3,}$"
+if [[ $lname =~ $pat ]]
+then
+  echo "Hello Mr.$fname $lname"
+else
+  echo "Last name should be begin with alphabets or having minimum length is 3"
+fi
