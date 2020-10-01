@@ -46,9 +46,15 @@ read password
 count=`echo ${#password}`
 if [[ $count -ge 8 ]]
 then
-    echo "Pass"
+if [[ $(echo "$password" | awk '/[A-Z]/') ]]
+then
+    echo "String meets your requirements"
+else
+    echo "String does not meet your requirements"
+fi
 else
     echo "Enter minimum 8 length"
 fi
+
 
 
