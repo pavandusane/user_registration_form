@@ -30,3 +30,12 @@ then
 else
    echo "Please Enter Valid Email Address"
 fi
+
+echo "Enter your mobile no : "
+read mob
+if [[ "$mob" =~ ^[7-9][0-9]{9}$ ]]
+then
+   echo "Your mobile Number is $mob"
+else
+   echo "Please Enter Valid Mobile Number"
+fi
