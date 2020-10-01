@@ -39,3 +39,16 @@ then
 else
    echo "Please Enter Valid Mobile Number"
 fi
+
+
+echo "Enter your password : "
+read password
+count=`echo ${#password}`
+if [[ $count -ge 8 ]]
+then
+    echo "Pass"
+else
+    echo "Enter minimum 8 length"
+fi
+
+
