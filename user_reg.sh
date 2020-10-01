@@ -46,7 +46,7 @@ read password
 count=`echo ${#password}`
 if [[ $count -ge 8 ]]
 then
-if [[ $(echo "$password" | awk '/[A-Z]/') ]]
+if [[ $(echo "$password" | awk '/[A-Z]/ && /[0-9]/') ]]
 then
     echo "String meets your requirements"
 else
